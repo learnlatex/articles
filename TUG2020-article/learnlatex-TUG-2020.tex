@@ -138,6 +138,75 @@ pages there is down to the translators.
 
 \section{Online \LaTeX{} compilers}
 
+
+\subsection{Processing examples ``in the page''}
+
+It is possible to run \TeX{} in the JavaScript engine in the browser and
+initially we did some experiments with
+\href{https://github.com/manuels/texlive.js/}{\texttt{texlive.js}} but
+such sytems are hard to keep up to date and currently only provide
+pdflatex not other engines such as lua\LaTeX{}. So the decision was
+made to use a server which ran \LaTeX{}, returning the generated PDF
+to the web browser.  An important consideration when choosing the
+technology here was that the examples should cover a range of
+languages and so a range of \TeX{} engines should be available,
+notably p\LaTeX{}, Lua\LaTeX{} and Xe\LaTeX{} in addition to
+pdf\LaTeX.
+
+Much of the initial development of the site used the
+\href{https://latexonline.cc}{latexonline.cc}
+and
+\href{https://latex.ytotech.com/}{latex-on-http}
+servers. However in
+the end we developed a server
+\href{https://latexcgi.xyz}{latexcgi.xyz}
+specifically tailored to the
+requirements of the site.
+
+The most noticable distinguishing feature of the \LaTeX{} CGI server
+is that it does not directly return the generated PDF but returns a
+call to a locally hosted copy of the
+\href{https://mozilla.github.io/pdf.js/}{PDF.js}
+JavaScript Library. This ensures a consistent behaviour, notably on
+mobile browsers which typically do not include a built in PDF
+renderer.
+
+The server supports options to return the PDF directly, or to return
+the log file, even of successful runs.
+
+\LaTeX{} CGI supports a range of \LaTeX{} formats:
+\texttt{lualatex}, \texttt{pdflatex}, \texttt{xelatex},
+\texttt{uplatex}, \texttt{platex} and their \texttt{-dev} variants. It also
+supports biber, bibtex, pbibtex and bibtex8 and makeindex.
+
+The server has installed a full copy of \TeX\ Live 2020 and runs in
+the default ``restricted shell escape'' mode. This means that packages
+ such as \textit{imakeidx} that make use of the allowed shell commands
+are available.
+
+Currently \url{latexcgi.xyz} is hosted as a virtual machine on
+Amazon's EC2 service, which is available in the \emph{Free Tier} for one
+year. Long term hosting has yet to be finalized.
+
+\subsection{Online \TeX{} processing systems}% bad title.
+All the systems menioned in the previous section have the feature that
+they require no login or pre-registration which is convenient but
+means that any edits to the documents are lost if the user moves off
+the page.  The site therefore offers a second alternative to access a
+full online \TeX{} system provider, currently Overleaf.
+
+If the \textbf{Open in Overleaf} button is used, a new project is
+opened in Overleaf in a new tab in the browser. The user can edit the
+example in Overleaf, and save the project and return to it later.
+
+The Overleaf API was extended for this site, to allow multiple-file
+projects to be uploaded in this way.
+
+Other \TeX{} editing systems could be used but a requirement is a
+public API that starts a project via an HTTP request rather than using
+the web page menu interface.
+
+
 \section{What's next}
 
 The web design we are using is very basic: just what comes out-of-the-box with
@@ -153,6 +222,9 @@ feedback, for which we need \emph{your} help. The site will work best if it's
 promoted to potential users, and readers of \emph{TUGboat} are we hope
 well-placed to recommend it. Of course, to do that, we'd encourage you to read
 the site, give feedback and perhaps even suggest some improvements!
+
+\section{How you can help}
+
 
 \makesignature
 
