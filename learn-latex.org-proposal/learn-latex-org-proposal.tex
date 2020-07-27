@@ -19,7 +19,7 @@
 
 % Meta-data
 \author{Joseph Wright\thanks{\email{joseph.wright@morningstar2.co.uk}}}
-\date{December 2019}
+\date{January 2020}
 \title{The \url{learn-latex.org} project}
 
 \begin{document}
@@ -28,140 +28,149 @@
 
 \section{Introduction}
 
-There are a plethora of resources available to new \LaTeX{} users. However,
-determining which of these they \emph{should} use is much more difficult.
-Online resources vary in quality and correctness: there are for example
-well-established concerns about the quality of advice in the
-\href{https://en.wikibooks.org/wiki/LaTeX}{\LaTeX{} Wikibook}. Many good
-resources are also likely over-detailed for a new user: what they need is to
-get over the initial barrier to becoming users.
+There are a plethora of resources available to new \LaTeX{} users. However, it
+is much more difficult to discover which of these provides the best
+introduction to \LaTeX{}. These online resources vary in quality and
+correctness: there are for example well-established concerns about the quality
+of advice in the \href{https://en.wikibooks.org/wiki/LaTeX}{\LaTeX{} Wikibook}.
+Many good resources are over-detailed for a new user who needs only
+straightforward help to get over the initial barrier to using the system.
 
-Many programming languages are now available to try online using
-web-based compilers. These are harnessed by a range of teaching websites to
-offer simple introductions: a good example is \url{https://www.learnpython.org}.
-Such sites tend to be strictly limited in scope, not aiming to teach every
-possible idea but rather a strictly-limited beginners \enquote{menu}.
+For many \enquote{programming languages} there are now web-sites providing the
+opportunity to try coding online using a cloud compiler. These cloud compilers
+can be harnessed by a range of teaching websites to offer a simple introduction
+to the language using a suitable \acro{ide} (integated development
+environment): a good example is \url{https://www.learnpython.org}. Such sites
+tend to be strictly limited in scope as they are not aiming to teach every
+possible idea in the language but only a strictly-limited \enquote{Beginners
+menu}.
 
-Here, I propose a new teaching site for \LaTeX{}, provisionally
-called \url{learn-latex.org}. The aim of this new site would be to provide
-a carefully-curated set of resources for beginners, with access to online
-demonstrations directly from the \enquote{lessons}. The scope of the lessons
-would be limited, and the aim of the site would be to offer the material
-in \enquote{bite-sized} chunks.
+Here I propose a new teaching site for \LaTeX{}, provisionally called
+\url{learn-latex.org}. The aim of this new site would be to provide a
+carefully-curated set of resources for beginner \LaTeX{} authors, with
+integrated use of an online \LaTeX{} environment and demonstrations accessed
+directly from these \enquote{lessons}. The scope of these learning resources
+would be limited, and the aim of the site would be to offer the material in
+\enquote{bite-sized} chunks.
 
 \section{Content}
 
 The UK \TeX{} Users' Group have prepared a set of notes for a one-day course
 (\url{https://github.com/uktug/latex-beginners-course}): these notes were
 originally prepared by Nicola Talbot and have been used successfully many
-times. A similar scope of teaching is encompassed in the Overleaf
+times. A similar teaching scope is that provided in the Overleaf
 \href{https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes}{\enquote{Learn
 \LaTeX{} in 30 minutes}} page.
 
-The content of the new site would draw on these resources (with appropriate
+The content of the new site will draw on these two resources (with appropriate
 permissions), providing a set of around a dozen \enquote{lessons}, each
-focussed on a basic topic. Most, if not all, of the material presented would
-make use only of \LaTeX{} Team packages: commands taken from the kernel and
-those from the \texttt{required} set.
+focussed on a basic topic. Most, if not all, of the material will be taken from
+the basic (kernel) ideas or, in some cases, from \LaTeX{} Team packages: only
+document-level commands taken from base and the \texttt{required} set of
+packages.
 
-In addition to the lessons, there will be a small set of resources for going
-further, along with links to finding help. Much of this is already listed on
-for example the \LaTeX{} team site, but having the new site self-contained is a
-key aim.
+In addition to the learning resources, there will be a small set of suggestions
+for \enquote{going further}, along with links to finding help. Much of this
+extra material is already availabke elsewhere online via, for example, the
+\LaTeX{} team site; but making this new site self-contained is a key aim.
 
 \section{Design}
 
-The appearance of the site is likely to require some input from experts in web
-design. However, one may envisage a simple layout with the \enquote{lessons}
-listed on one side of the screen, with the bulk of the page taken up by the
-lesson. Some visual links to the design of the \LaTeX{} Team website would
-likely be appropriate.
+The appearance and mechanics of the site will require some input from experts
+in web site design. One could, for example, envisage a simple layout with the
+bookmarks listed on one side of the screen and the bulk of the page taken up by
+the \enquote{learning materials}. Some visual relationship to the design of the
+\LaTeX{} Team website would be appropriate.
 
-Important in the overall layout is making the site visually attractive and
-accessible. This will likely differentiate it from many other \LaTeX{}
-resources, many of which are several years old and reflect older website
-practice.
+Making the site visually attractive and, in all ways, accessible will be an
+important aim as this will help to differentiate it from many other online
+\LaTeX{} resources (many of which are several years old and reflect older
+website practice).
 
 \section{Online compilation}
 
-A key aim of the new site will be to make learning \LaTeX{} a barrier-free
-experience. Whilst having a local installation remains useful for many users,
-the availability of online compilation is a particular bonus for new users.
+A key aim of the new site will be to make learning \LaTeX{} a
+\enquote{barrier-free experience} for new users: therefore it needs to provide
+a well-integrated online compiler.
 
-There are a number of commercial sites offering \LaTeX{} either as an explicit
+There are a number of commercial sites offering \LaTeX{}, either as an explicit
 service or \enquote{behind the scenes}. Of the current set of websites,
-Overleaf is perhaps the most widely-used and clearest in providing explicit
-\LaTeX{} editing online. It will be important to be clear to users of the new
-site that there are multiple options, but establishing a relationship with an
-online provider will be important in making the site a success.
+Overleaf is perhaps the most widely-used and it is the leader in providing
+\LaTeX{} processing online. It will be important to be clear to users of the
+new site that there are multiple options for \enquote{compiling documents}, but
+establishing a relationship with an online provider will be important in making
+the site a success.
 
-\section{Organisation}
+\section{Technical Organisation}
 
 By far the easiest way of organising a relatively small site, as envisaged
 here, is to use a service such as GitHub Pages to serve the content. This will
 allow a team of maintainers to create the site using simple Markdown and
-\acro{html} files, and to leave the details of the web presence largely to
-others.
+\acro{html} files, leaving the details of the web presence to the service
+providers.
 
-This model has recently been adopted for the long-standing \TeX{} Frequently
-Asked Questions, now served as \url{www.texfaq.org} as a custom \acro{url}
-around a GitHub site. This approach is scalable and flexible, and also means
-that the maintainers can be managed simply by adding/removing access to the
-host repository.
+This model has recently been adopted for the long-standing \TeX{}
+\textsl{Frequently Asked Questions}, now served as \url{www.texfaq.org} as a
+custom \acro{url} around a GitHub site. This approach is scalable and flexible,
+and also means that the maintenance personnel can be managed simply, by
+adding/removing an individual's access to the host repository.
 
-Strong leadership will be important for a \enquote{canonical} teaching site for
-\LaTeX{}. Whilst both \acro{tug} and \acro{dante} could act as central
-points, it seems most sensible for the \LaTeX{} Team to have overall control of
-a resource for teaching their core product. There are a number of individuals
-outside of the team who might reasonably act as outside collaborators, for
-example Nicola Talbot, Karl Berry and Barbara Beeton.
+Strong institutional support will be important for such a \enquote{canonical}
+learning resources site for \LaTeX{}. Whilst both \acro{tug} and \acro{dante}
+could act as central points, it seems most sensible for the \LaTeX{} Team to
+have overall editorial and operational control of such resources for their core
+product. There are a number of individuals outside this team who would be
+useful collaborators, for example Nicola Talbot, Karl Berry and Barbara Beeton.
 
-Links to any commercial collaborators will need to be carefully managed. There
-are good reasons to think that online service providers will be keen on better
-resources for new users. At the same time, it is vital that overall control
-both of the concept and the content remains in community hands. As such,
-material donated by any commercial entities will need clearly to be given
-without restrictions.
+Relationships with commercial collaborators will need to be carefully managed.
+There are good reasons to think that online service providers will be keen on
+supporting such improved online learning resources for new users. At the same
+time, it is vital that overall control, of both the concept and the content,
+remains in the hands of the \LaTeX{} Team. As such, material donated by any
+commercial entities will need clearly to be given without restrictions.
 
 \section{Funding}
 
-Resources for hosting the new site will be modest: using free services such
-as GitHub Pages and free online compilation sites should be possible. The
-websites \url{learn-latex.org} and \url{learnlatex.org} have already been
-secured, and are renewable at a cost of around \pounds 20 each \foreign{per
-annum}.
+Resources for hosting the new site will be modest due to the use of many free
+services such as GitHub Pages and online compilation sites. The websites
+\url{learn-latex.org} and \url{learnlatex.org} have already been secured, and
+are renewable at a cost of around \pounds 20 (\acro{gbp}) each a year.
 
-The biggest single cost is likely to be design work at the outset. Funding
-to support this effort will be required: expertise in web design is not
-necessarily available readily within the \LaTeX{} community. User groups
-are probably the best source for such funds, which are likely to be of
-the order of \pounds 1000 to \pounds 5000.
+The biggest single cost is likely to be for the design work on the web-site at
+the outset. Funding to support this effort will be required: unpaid expertise
+in web design is not available readily within the \LaTeX{} community. User
+groups are probably the best source for such funds, which are likely to be of
+the order of \pounds 4000 to \pounds 6000.
 
 Running costs of the proposed site will be minimal, likely limited
 to \acro{url} provision.
 
 \section{Ongoing support}
 
-There will be need to curate the new site over time. Merging corrections or new
-content will be in the control of the \enquote{curators} (likely the \LaTeX{}
-Team). However, using the collaborative model offered by GitHub (or similar
-hosting sites), contributions from other experienced \LaTeX{} users will be
-possible. This should allow a key balance of controlled high-quality content
-\emph{and} sufficient resources to maintain the site.
+There will be an ongoing need to curate the site: merging corrections and
+adding new content will be under the control of the \enquote{curators} (likely
+the \LaTeX{} Team). However, using the collaborative model offered by GitHub
+(or similar hosting sites), adding contributions from other experienced
+\LaTeX{} users and teachers will be possible. This should allow a good
+symbiosis of controlled, high-quality content \emph{and} sufficient resources
+to maintain the site.
 
 \section{Conclusions}
 
-The creation of a new \LaTeX{} teaching site focussed strictly on new users and
-providing a modern web experience will significantly-enhance the accessibly of
-\LaTeX{} by new users. The effort required to establish and maintain this site
-is reasonable. In particular, the more web-focussed aspects can likely be
-handled on a contract basis. This will allow the \LaTeX{} experts involved to
-focus on content creation and review. The latter can be handled using standard
+The creation of a new, high-quality \LaTeX{} teaching site focussed strictly on new author users and
+providing a modern web experience will significantly enhance the spread of
+\LaTeX{} to new users. The effort required to establish and maintain this site
+will be reasonable, with the more web-focussed aspects likely to be
+handled on a contract basis. This will allow  \LaTeX{} teaching experts to
+focus on content creation and review. These can be handled using standard
 Git workflows to allow third-party contributions
 to the site without endangering overall quality.
 
-Funding at the level of \pounds 1000 to \pounds 5000 at outset will be a
+Funding at the level of \pounds 4000 to \pounds 6000 at outset will be a
 one-off cost, after which the site will be broadly self-sustaining in
 financial terms.
 
 \end{document}
+
+
+
