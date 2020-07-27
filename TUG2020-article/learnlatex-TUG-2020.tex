@@ -188,6 +188,15 @@ Currently \url{latexcgi.xyz} is hosted as a virtual machine on
 Amazon's EC2 service, which is available in the \emph{Free Tier} for one
 year. Long term hosting has yet to be finalized.
 
+Other initiatives include the use of Docker images in order to provide
+a sandbox environment holding the \TeX\ infrastructure. The
+\href{https://gitlab.com/islandoftex/images}{Island of \TeX} provides
+such images, which are based on GNU/Linux and ship with all required
+tools for running \TeX\ Live, among them Java (e.g. for \texttt{arara}),
+Python (e.g. for \texttt{Pygmentize})and Perl (e.g. for \texttt{xindy}).
+The project repository holds historic versions as well. Running \TeX\ programs
+in a sandbox environment might mitigate the use of unrestricted shell escape.
+
 \subsection{Online \TeX{} processing systems}% bad title.
 All the systems menioned in the previous section have the feature that
 they require no login or pre-registration which is convenient but
