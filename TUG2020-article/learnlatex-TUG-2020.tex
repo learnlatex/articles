@@ -82,9 +82,56 @@ structure and the online element.
 
 \section{Writing content}
 
+The starting point for writing the content was long-standing material developed
+by the Nicola Talbot then used by the UK \TeX{} User Group (\acro{uk-tug}) for
+face-to-face lessons (https://github.com/uktug/latex-beginners-course). After 
+assembling a small group of volunteers, we began by looking at this curriculum,
+the content of other sites and discussions we have all had with new(er) users.
+That lead to a first set of section titles, which we adjusted as new ideas
+arose.
+
+We then started drafting the content, taking existing notes plus new material
+to deliver around 15 lessons.\footnote{We've grown to 16 lessons, as there was
+a strong argument to add one on errors.} As we worked through these, we found
+we had more to say that was reasonable to cover in a focussed set of lessons.
+We also felt there was good content that did not belong in the basic lessons,
+but did belong somewhere. That led to a split of each lesson into two parts:
+the basics and \enquote{going further}. (We'll look at the file structures
+below, and how they build the site.)
+
+As well as the content and demonstrations, we've worked hard to make sure that
+the lessons are up-to-date and accurate. That's led to discussions with the
+\LaTeX{} team about for example \verb|\label|, which is reflected in the lesson
+content and means that we are confident the site covers \emph{best practice}.
+
 \section{Website structure}
 
+Based on experience with \url{texfaq.org}, we knew that GitHub Pages, which
+lets you write webpages in Markdown, was a good place to look to host the site.
+This means that multiple authors can easily work with the sources without
+needing to set up complex build system: the pages can be edited on the GitHub
+site, so a local Git installation is not even required.
+
+We started with a simple structure, with an index and 15 \texttt{lesson-XX}
+files (all in Markdown, of course). GitHub Pages runs a system called Jekyll,
+which turns those files into the full site. That's done using various bits of
+template plus some scripting, which can all be user-controlled. As the site has
+grown, we split the extra content into \texttt{more-XX} files, which can then
+be linked automatically to their \enquote{parent}.
+
+Not long after we started work, the question of translations came up. We'd started
+with the idea of just working in English, but we didn't want to box ourselves in.
+So we moved all of the content into a directory called \texttt{/en}, and started
+exploring how to add a language selector. To help with that, we made some stub
+files that were marked as being in a few languages, then got at least the
+page titles translated by real people. It turns out to be reasonably easy
+to add a selector, and there's already been interest in translation, so
+we have the site in English, Vietnamese and Portuguese already, with Spanish
+and German in the pipeline.
+
 \section{Online \LaTeX{} compilers}
+
+\section{What's next}
 
 \section{How you can help}
 
