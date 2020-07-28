@@ -74,7 +74,7 @@ same as any other document edited on Overleaf, but means leaving the teaching
 page. The other leading hits for learning \LaTeX{} require that the learner
 copies or types out the examples by-hand.
 
-In contrast, learning other programming languages can today often start on
+In contrast, users learning other programming languages can today often start on
 websites that let them try out the system \emph{in the page}. That means
 no copy-pasting, no need to move to other tabs and no need to download and
 install software. As mentioned above, \href{https://LearnPython.org}{\nolinkurl{LearnPython.org}} is an excellent
@@ -89,7 +89,7 @@ structure and the online element.
 \section{Writing content}
 
 The starting point for writing the content was long-standing material developed
-by the Nicola Talbot then used by the UK \TeX{} User Group (\acro{uk-tug}) for
+by Nicola Talbot then used by the UK \TeX{} User Group (\acro{uk-tug}) for
 face-to-face lessons (\url{https://github.com/uktug/latex-beginners-course}). After 
 assembling a small group of volunteers, we began by looking at this curriculum,
 the content of other sites and discussions we have all had with new(er) users.
@@ -99,7 +99,7 @@ arose.
 We then started drafting the content, taking existing notes plus new material
 to deliver around 15 lessons.\footnote{We've grown to 16 lessons, as there was
 a strong argument to add one on errors.} As we worked through these, we found
-we had more to say that was reasonable to cover in a focussed set of lessons.
+we had more to say than was reasonable to cover in a focussed set of lessons.
 We also felt there was good content that did not belong in the basic lessons,
 but did belong somewhere. That led to a split of each lesson into two parts:
 the basics and \enquote{going further}. (We'll look at the file structures
@@ -132,8 +132,8 @@ exploring how to add a language selector. To help with that, we made some stub
 files that were marked as being in a few languages, then got at least the
 page titles translated by real people. It turns out to be reasonably easy
 to add a selector, and there's already been interest in translation, so
-we have the site in English, Vietnamese and Portuguese already, with Spanish
-and German in the pipeline.
+we have the site in English, Vietnamese and Portuguese already, with Spanish,
+German and Japanese in the pipeline.
 
 Linked to translations, we also realised that while most of the lessons stay
 the same for every language, we needed a place where language-specifics could
@@ -199,14 +199,14 @@ Currently \href{https://latexcgi.xyz}{\nolinkurl{latexcgi.xyz}} is hosted as a v
 Amazon's EC2 service, which is available in the \emph{Free Tier} for one
 year. Long term hosting has yet to be finalized.
 
-Other initiatives include the use of Docker images in order to provide
-a sandbox environment holding the \TeX{} infrastructure. The
-\href{https://gitlab.com/islandoftex/images}{Island of \TeX{}} provides
-such images, which are based on \acro{GNU}/Linux and ship with all required
-tools for running \TeX{} Live, among them Java (e.g.\ for \texttt{arara}),
-Python (e.g.\ for \texttt{Pygmentize})and Perl (e.g.\ for \texttt{xindy}).
-The project repository holds historic versions as well. Running \TeX{} programs
-in a sandbox environment might mitigate the use of unrestricted shell escape.
+Using a dedicated server gives some flexibility in the technologies
+used.  One possibility would be to use Docker images such as the
+\TeX{} Live images provided by the
+\href{https://gitlab.com/islandoftex/images}{Island of \TeX{}}.  This
+would likely be necessary if we decide to offer more programming
+features, in particular allow \TeX{} to be run with shell escape
+enabled, although currently the intention is to match the default
+(restricted shell escape) that matches a typical user's system.
 
 \subsection{Online \TeX{} processing systems}
 
