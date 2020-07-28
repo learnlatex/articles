@@ -144,20 +144,19 @@ pages there is down to the translators.
 
 \section{Online \LaTeX{} compilers}
 
-
-\subsection{Processing examples ``in the page''}
+\subsection{Processing examples \enquote{in the page}}
 
 It is possible to run \TeX{} in the JavaScript engine in the browser and
 initially we did some experiments with
 \href{https://github.com/manuels/texlive.js/}{\texttt{texlive.js}} but
-such sytems are hard to keep up to date and currently only provide
-pdflatex not other engines such as lua\LaTeX{}. So the decision was
-made to use a server which ran \LaTeX{}, returning the generated PDF
+such systems are hard to keep up to date and currently only provide
+\hologo{pdfLaTeX} not other engines such as \hologo{LuaLaTeX}. So the decision was
+made to use a server which ran \LaTeX{}, returning the generated \acro{PDF}
 to the web browser.  An important consideration when choosing the
 technology here was that the examples should cover a range of
 languages and so a range of \TeX{} engines should be available,
-notably p\LaTeX{}, Lua\LaTeX{} and Xe\LaTeX{} in addition to
-pdf\LaTeX.
+notably p\LaTeX{}, \hologo{LuaLaTeX} and \hologo{XeLaTeX} in addition to
+\hologo{pdfLaTeX}.
 
 Much of the initial development of the site used the
 \href{https://latexonline.cc}{latexonline.cc}
@@ -165,29 +164,29 @@ and
 \href{https://latex.ytotech.com/}{latex-on-http}
 servers. However in
 the end we developed a server
-\href{https://latexcgi.xyz}{latexcgi.xyz}
+\url{latexcgi.xyz}
 specifically tailored to the
 requirements of the site.
 
-The most noticable distinguishing feature of the \LaTeX{} CGI server
-is that it does not directly return the generated PDF but returns a
+The most noticeable distinguishing feature of the \LaTeX{}~\acro{CGI} server
+is that it does not directly return the generated \acro{PDF} but returns a
 call to a locally hosted copy of the
-\href{https://mozilla.github.io/pdf.js/}{PDF.js}
+\href{https://mozilla.github.io/pdf.js/}{\acro{PDF}.js}
 JavaScript Library. This ensures a consistent behaviour, notably on
-mobile browsers which typically do not include a built in PDF
+mobile browsers which typically do not include a built in \acro{PDF}
 renderer.
 
-The server supports options to return the PDF directly, or to return
+The server supports options to return the \acro{PDF} directly, or to return
 the log file, even of successful runs.
 
-\LaTeX{} CGI supports a range of \LaTeX{} formats:
+\LaTeX{}~\acro{CGI} supports a range of \LaTeX{} formats:
 \texttt{lualatex}, \texttt{pdflatex}, \texttt{xelatex},
 \texttt{uplatex}, \texttt{platex} and their \texttt{-dev} variants. It also
-supports biber, bibtex, pbibtex and bibtex8 and makeindex.
+supports \texttt{biber}, \texttt{bibtex}, \texttt{pbibtex} and \texttt{bibtex8} and \texttt{makeindex}.
 
-The server has installed a full copy of \TeX\ Live 2020 and runs in
-the default ``restricted shell escape'' mode. This means that packages
- such as \textit{imakeidx} that make use of the allowed shell commands
+The server has installed a full copy of \TeX{} Live 2020 and runs in
+the default \enquote{restricted shell escape} mode. This means that packages
+ such as \texttt{imakeidx} that make use of the allowed shell commands
 are available.
 
 Currently \url{latexcgi.xyz} is hosted as a virtual machine on
@@ -195,16 +194,17 @@ Amazon's EC2 service, which is available in the \emph{Free Tier} for one
 year. Long term hosting has yet to be finalized.
 
 Other initiatives include the use of Docker images in order to provide
-a sandbox environment holding the \TeX\ infrastructure. The
-\href{https://gitlab.com/islandoftex/images}{Island of \TeX} provides
-such images, which are based on GNU/Linux and ship with all required
-tools for running \TeX\ Live, among them Java (e.g. for \texttt{arara}),
-Python (e.g. for \texttt{Pygmentize})and Perl (e.g. for \texttt{xindy}).
-The project repository holds historic versions as well. Running \TeX\ programs
+a sandbox environment holding the \TeX{} infrastructure. The
+\href{https://gitlab.com/islandoftex/images}{Island of \TeX{}} provides
+such images, which are based on \acro{GNU}/Linux and ship with all required
+tools for running \TeX{} Live, among them Java (e.g.\ for \texttt{arara}),
+Python (e.g.\ for \texttt{Pygmentize})and Perl (e.g.\ for \texttt{xindy}).
+The project repository holds historic versions as well. Running \TeX{} programs
 in a sandbox environment might mitigate the use of unrestricted shell escape.
 
-\subsection{Online \TeX{} processing systems}% bad title.
-All the systems menioned in the previous section have the feature that
+\subsection{Online \TeX{} processing systems}
+
+All the systems mentioned in the previous section have the feature that
 they require no login or pre-registration which is convenient but
 means that any edits to the documents are lost if the user moves off
 the page.  The site therefore offers a second alternative to access a
@@ -214,11 +214,11 @@ If the \textbf{Open in Overleaf} button is used, a new project is
 opened in Overleaf in a new tab in the browser. The user can edit the
 example in Overleaf, and save the project and return to it later.
 
-The Overleaf API was extended for this site, to allow multiple-file
+The Overleaf \acro{API} was extended for this site, to allow multiple-file
 projects to be uploaded in this way.
 
 Other \TeX{} editing systems could be used but a requirement is a
-public API that starts a project via an HTTP request rather than using
+public \acro{API} that starts a project via an \acro{HTTP} request rather than using
 the web page menu interface.
 
 
