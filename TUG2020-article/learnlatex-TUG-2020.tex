@@ -1,10 +1,11 @@
-\documentclass[harvardcite]{ltugboat}
+\documentclass[final]{ltugboat}
 
 \usepackage[UKenglish]{babel}
 \usepackage{csquotes}
 \usepackage{hologo}
-\usepackage{xurl}
-\usepackage{hyperref}
+%\usepackage{xurl} % roman underscores?
+\usepackage{microtype}
+\usepackage[hidelinks,breaklinks]{hyperref}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Some (very simple) new commands are defined.
@@ -14,7 +15,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Meta-data for this paper
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{\texttt{learnlatex.org}: Taking \LaTeX{} training fully interactive}
+\title{\texttt{learnlatex.org}: Taking \LaTeX{} training fully~interactive}
 \author{David Carlisle}
 \address{Oxford, United Kingdom}
 \netaddress{d dot p dot carlisle (at) gmail.com}
@@ -38,13 +39,13 @@ over time, and with limited editing, even good advice can become out-of-date.
 Many good resources are over-detailed for a new user who needs only
 straightforward help to get over the initial barrier to using the system.
 
-For many programming languages there are now web-sites providing the
+For many programming languages there are now web sites providing the
 opportunity to try coding online using a cloud compiler. These cloud compilers
 can be harnessed by a range of teaching websites to offer a simple introduction
 to the language using a suitable \acro{IDE} (integrated development
-environment): a good example is \href{https://LearnPython.org}{\nolinkurl{LearnPython.org}}. Such sites tend to be
+environment); a good example is \href{https://LearnPython.org}{\nolinkurl{LearnPython.org}}. Such sites tend to be
 limited in scope as they are not aiming to teach every possible idea in the
-language but only \enquote{Beginners} menu.
+language but only a \enquote{Beginners} menu.
 
 Over the past six months, work has been ongoing in filling that gap for
 \LaTeX{}: \href{https://learnlatex.org}{\nolinkurl{learnlatex.org}}. The aim of this new site is to provide a
@@ -59,8 +60,8 @@ There are already many online resources for learning \LaTeX{}, as a simple web
 search will reveal. The top hit at present is Overleaf's \enquote{Learn
 \LaTeX{} in 30 Minutes}
 (\url{https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes}), which
-covers a lot of the core ideas with a series of examples. Second is
-\url{https://www.latex-tutorial.com/}, which takes the step of dividing up the
+covers many of the core ideas with a series of examples. The second is
+\url{https://www.latex-tutorial.com}, which takes the step of dividing up the
 lessons into a series of pages. There are then more \enquote{traditional}
 resources, including the long-standing \LaTeX{} Wikibook
 (\url{https://en.wikibooks.org/wiki/LaTeX}), and of course many excellent
@@ -72,11 +73,11 @@ teaching page, the examples are given as code blocks but to run then, a
 separate tab needs to be opened. That has the positive of looking exactly the
 same as any other document edited on Overleaf, but means leaving the teaching
 page. The other leading hits for learning \LaTeX{} require that the learner
-copies or types out the examples by-hand.
+copies or types out the examples by hand.
 
 In contrast, users learning other programming languages can today often start on
 websites that let them try out the system \emph{in the page}. That means
-no copy-pasting, no need to move to other tabs and no need to download and
+no copy-pasting, no need to move to other tabs, and no need to download and
 install software. As mentioned above, \href{https://LearnPython.org}{\nolinkurl{LearnPython.org}} is an excellent
 example, forming part of a family of around half a dozen sites using the
 same overall framework to teach a set of modern languages.
@@ -84,16 +85,19 @@ same overall framework to teach a set of modern languages.
 The \href{https://learnlatex.org}{\nolinkurl{learnlatex.org}} project was started with the aim of combining existing
 best-practice teaching on \LaTeX{} with a strong focus on interactive, online,
 training. That required tackling three things: the content, the website
-structure and the online element.
+structure, and the online element.
 
 \section{Writing content}
 
 The starting point for writing the content was long-standing material developed
-by Nicola Talbot then used by the UK \TeX{} User Group (\acro{uk-tug}) for
-face-to-face lessons (\url{https://github.com/uktug/latex-beginners-course}). After 
+by Nicola Talbot and used by the UK \TeX{} User Group (\acro{UK-TUG}) for
+face-to-face lessons (%
+\href{https://github.com/uktug/latex-beginners-course}
+     {\texttt{https://github.com/uktug/latex-\break beginners-course}}%
+). After 
 assembling a small group of volunteers, we began by looking at this curriculum,
 the content of other sites and discussions we have all had with new(er) users.
-That lead to a first set of section titles, which we adjusted as new ideas
+That led to a first set of section titles, which we adjusted as new ideas
 arose.
 
 We then started drafting the content, taking existing notes plus new material
@@ -115,13 +119,13 @@ content and means that we are confident the site covers \emph{best practice}.
 Based on experience with \href{https://texfaq.org}{\nolinkurl{texfaq.org}}, we knew that GitHub Pages, which
 lets you write webpages in Markdown, was a good place to look to host the site.
 This means that multiple authors can easily work with the sources without
-needing to set up complex build system: the pages can be edited on the GitHub
+needing to set up a complex build system: the pages can be edited on the GitHub
 site, so a local Git installation is not even required.
 
 We started with a simple structure, with an index and 15 \texttt{lesson-XX}
 files (all in Markdown, of course). GitHub Pages runs a system called Jekyll,
 which turns those files into the full site. That's done using various bits of
-template plus some scripting, which can all be user-controlled. As the site has
+template plus some scripting, which can all be user controlled. As the site has
 grown, we split the extra content into \texttt{more-XX} files, which can then
 be linked automatically to their \enquote{parent}.
 
@@ -155,8 +159,8 @@ or even Mini\LaTeX{} (\href{https://minilatex.app}{\nolinkurl{minilatex.app}}) w
 It is possible to run \TeX{} in the JavaScript engine in the browser and
 initially we did some experiments with
 \href{https://github.com/manuels/texlive.js/}{\texttt{texlive.js}} but
-such systems are hard to keep up to date and currently only provide
-\hologo{pdfLaTeX} not other engines such as \hologo{LuaLaTeX}. So the decision was
+such systems are hard to keep up to date and currently provide only
+\hologo{pdfLaTeX}, not other engines such as \hologo{LuaLaTeX}. So the decision was
 made to use a server which ran \LaTeX{}, returning the generated \acro{PDF}
 to the web browser.  An important consideration when choosing the
 technology here was that the examples should cover a range of
@@ -164,31 +168,31 @@ languages and so a range of \TeX{} engines should be available,
 notably p\LaTeX{}, \hologo{LuaLaTeX} and \hologo{XeLaTeX} in addition to
 \hologo{pdfLaTeX}.
 
-Much of the initial development of the site used the
-\href{https://latexonline.cc}{latexonline.cc}
+During initial development of the site, we mostly used the servers
+\href{https://latexonline.cc}{\texttt{latexonline.cc}}
 and
-\href{https://latex.ytotech.com/}{latex-on-http}
-servers. However in
+{latex-on-http} (\url{https://latex.ytotech.com/}). However, in
 the end we developed a server
 \href{https://latexcgi.xyz}{\nolinkurl{latexcgi.xyz}}
 specifically tailored to the
 requirements of the site.
 
 The most noticeable distinguishing feature of the \LaTeX{}~\acro{CGI} server
-is that it does not directly return the generated \acro{PDF} but returns a
+is that it does not directly return the generated \acro{PDF} but instead
+returns a
 call to a locally hosted copy of the
-\href{https://mozilla.github.io/pdf.js/}{\acro{PDF}.js}
-JavaScript Library. This ensures a consistent behaviour, notably on
-mobile browsers which typically do not include a built in \acro{PDF}
+\texttt{PDF.js} (\url{https://mozilla.github.io/pdf.js})
+JavaScript library. This ensures consistent behaviour, notably on
+mobile browsers which typically do not include a built-in \acro{PDF}
 renderer.
-
-The server supports options to return the \acro{PDF} directly, or to return
+The server does support options to return the \acro{PDF} directly, or to return
 the log file, even of successful runs.
 
 \LaTeX{}~\acro{CGI} supports a range of \LaTeX{} formats:
 \texttt{lualatex}, \texttt{pdflatex}, \texttt{xelatex},
 \texttt{uplatex}, \texttt{platex} and their \texttt{-dev} variants. It also
 supports \texttt{biber}, \texttt{bibtex}, \texttt{pbibtex} and \texttt{bibtex8} and \texttt{makeindex}.
+{\hfuzz=2.7pt\par}
 
 The server has installed a full copy of \TeX{} Live 2020 and runs in
 the default \enquote{restricted shell escape} mode. This means that packages
@@ -196,13 +200,14 @@ the default \enquote{restricted shell escape} mode. This means that packages
 are available.
 
 Currently \href{https://latexcgi.xyz}{\nolinkurl{latexcgi.xyz}} is hosted as a virtual machine on
-Amazon's EC2 service, which is available in the \emph{Free Tier} for one
+Amazon's \acro{EC2} service, which is available in the \emph{Free Tier} for one
 year. Long term hosting has yet to be finalized.
 
 Using a dedicated server gives some flexibility in the technologies
 used.  One possibility would be to use Docker images such as the
-\TeX{} Live images provided by the
-\href{https://gitlab.com/islandoftex/images}{Island of \TeX{}}.  This
+\TeX{} Live images provided by 
+Island of \TeX{}
+(\url{https://gitlab.com/islandoftex/images}).  This
 would likely be necessary if we decide to offer more programming
 features, in particular allow \TeX{} to be run with shell escape
 enabled, although currently the intention is to match the default
@@ -211,14 +216,14 @@ enabled, although currently the intention is to match the default
 \subsection{Online \TeX{} processing systems}
 
 All the systems mentioned in the previous section have the feature that
-they require no login or pre-registration which is convenient but
-means that any edits to the documents are lost if the user moves off
+they require no login or pre-registration, which is convenient but
+means that any edits to the documents are lost when the user moves off
 the page.  The site therefore offers a second alternative to access a
 full online \TeX{} system provider, currently Overleaf.
 
 If the \textbf{Open in Overleaf} button is used, a new project is
 opened in Overleaf in a new tab in the browser. The user can edit the
-example in Overleaf, and save the project and return to it later.
+example in Overleaf, and save the project if desired, to return to it later.
 
 The Overleaf \acro{API} was extended for this site, to allow multiple-file
 projects to be uploaded in this way.
@@ -235,7 +240,7 @@ GitHub Pages. To help users navigate, we need proper development of a full
 site. That's beyond the expertise of the site team, but we have been able to
 raise funds to employ a professional web developer. He's looking at design both
 in terms of appearance and structure: things like mobile accessibility,
-metadata, etc.\ are all really important.
+metadata, etc., are all really important.
 
 There's also still more to do on the content, in particular working out if we
 need more formalised exercises or lesson summaries. That likely needs user
