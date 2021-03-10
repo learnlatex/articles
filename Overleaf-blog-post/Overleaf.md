@@ -57,7 +57,8 @@ anything.
 
 On [learnlatex.org](https://www.learnlatex.org) we currently offer a couple of
 ways of using the examples online. We've set them up so you can open in
-Overleaf, but also provide a lightweight set up where they run directly in the
+Overleaf (thanks to Overleaf for extending the API to enable this).
+We also provide a lightweight set up where examples run directly in the
 web page. This method means there's no need to leave the site, or to log in
 anywhere. Of course,  it means that you can't _save_ your changes, but when
 trying out ideas that  is perhaps not a bad thing!
