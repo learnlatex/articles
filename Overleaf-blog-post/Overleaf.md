@@ -30,7 +30,7 @@ core set of 16 ideas plus a parallel set of 'going further' pages.
 The central idea is to get people started with one of the most common LaTeX
 tasks: writing an academic document such as an article or report. So the topics
 start with simple LaTeX structure, cover things like including images and move
-on to long documents and bibliographies. We do cover math mode, but  done' go
+on to long documents and bibliographies. We do cover math mode, but  don't go
 into a lot of detail: yes, math mode is a core LaTeX strength, but  for many
 users, mathematics is just scary.
 
