@@ -17,7 +17,7 @@ beginners.
 
 ## Who we are
 
-The [learnlatex.org](https://www.learnlatex.org) is led by members of the [LaTeX
+The [learnlatex.org](https://www.learnlatex.org) project is led by members of the [LaTeX
 Project](https://www.latex-project.org), primarily David Carlisle and Joseph
 Wright (who wrote most of this actual post). But it is broader-based: the
 content has been written by many people, and translations bring in even more
