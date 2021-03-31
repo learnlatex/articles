@@ -15,6 +15,14 @@ programming tools. The [learnlatex.org](https://www.learnlatex.org) project was
 born out of the desire to provide the same easy-to-access approach for LaTeX
 beginners.
 
+## Who we are
+
+The [learnlatex.org](https://www.learnlatex.org) is led by members of the [LaTeX
+Project](https://www.latex-project.org), primarily David Carlisle and Joseph
+Wright (who wrote most of this actual post). But it is broader-based: the
+content has been written by many people, and translations bring in even more
+contributors.
+
 ## Good starting points
 
 Before we worry about the technical detail of providing online lessons, there is
