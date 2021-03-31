@@ -57,8 +57,8 @@ ways of using the examples online.  We provide a lightweight set up where
 examples run directly in the web page. This method means there's no need to
 leave the site, or to log in anywhere. Of course,  it means that you can't
 _save_ your changes, but when trying out ideas that  is perhaps not a bad thing!
-For people who want to work online in a more permanent set up, we've set up so
-you can open the examples [Overleaf](https://www.overleaf.com).
+For people who want to work online in a more permanent set up, we've set it up so
+you can open the examples in [Overleaf](https://www.overleaf.com).
 
 None of that ties anyone to the site, of course. The examples are plain text and
 can be copied and pasted into an editor. We tell people how to set up their
@@ -77,13 +77,13 @@ translations have been created into for example German and Vietnamese.
 
 There's also language-specific stuff you need to think about when you are using
 LaTeX: different languages come with different typographic traditions. So each
-translation has it's own dedicated pages to highlight what you might need to
+translation has its own dedicated pages to highlight what you might need to
 know about specific to the language you are writing (and reading!) in.
 
 ## Conclusions
 
 On [learnlatex.org](https://www.learnlatex.org), we have set up a site that is
-up-to-date both in it's content and web design, and provides multiple ways to
+up-to-date both in its content and web design, and provides multiple ways to
 try LaTeX out. There's a structured approach to the lessons, with more detail
 for those who need it. It's ready to use now in seven languages, with more
 translations underway. We hope it will soon be one of _the_ places that new
